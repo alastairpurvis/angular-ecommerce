@@ -6,7 +6,7 @@ An ecommerce front end that leverages the Moltin API for backend store requests.
 
 1. Register at https://moltin.com/
 2. Get the public key from the site
-3. Update the <strong>PUBLIC_ID</strong> in app/dataService/service.details.ts with your public ID.
+3. Update the <strong>publicKey</strong> in src/js/app.js with your public ID.
 2. Create a store at https://forge.moltin.com/ after registration
 
 ## Prerequisities
