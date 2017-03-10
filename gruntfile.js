@@ -34,8 +34,18 @@ module.exports = function(grunt) {
         separator: ";\n"
       },
       dist: {
-        src: ['src/libs/jquery-3.1.1.min.js', 'src/libs/bootstrap.min.js', 'src/libs/angular.min.js', 'src/libs/angular-*.js', 'src/libs/*.js', 'build/templates.js', 'src/js/app.js', 'src/js/factory.js', 'src/js/directive.js', 'src/js/pages/*.js', 'src/js/run.js'],
+        src: ['src/libs/jquery-3.1.1.min.js', 'src/libs/bootstrap.min.js', 'src/libs/angular-*.js', 'src/libs/*.js', 'build/templates.js', 'src/js/app.js', 'src/js/factory.js', 'src/js/directive.js', 'src/js/pages/*.js', 'src/js/run.js'],
         dest: 'build/concat.js'
+      }
+    },
+    karma: {
+      options: {
+        // point all tasks to karma config file
+        configFile: 'karma-conf.js'
+      },
+      unit: {
+        // run tests once instead of continuously
+        singleRun: true
       }
     },
     babel: {
@@ -103,5 +113,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-serve');
+  grunt.registerTask('test', [
+    'karma'
+  ]);
   return grunt.registerTask('default', ['eslint', 'html2js', 'concat','babel', 'uglify', 'cssmin', 'connect', 'watch']);
 };
