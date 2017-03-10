@@ -122,12 +122,12 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 .btn:hover
 {
-   background-color:#4DC7EC;
+   background-color:#353535;
    color:#fff;
 }
 .btn-primary
 {
-	background-color:#4DC7EC;
+	background-color:#353535;
 	color:#fff;
 	padding:12px 25px 10px;
 	transition:all 0.4s ease 0s;
@@ -281,7 +281,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 	.navbar .nav > li:hover > a
 	{
-	  background:#4DC7EC;
+	  background:#353535;
 	  color:#fff;
 	}
 
@@ -314,7 +314,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	{
 		background:#777;
 		background:rgba(0, 0, 0, 0.9);
-		background:#4DC7EC;
+		background:#353535;
 		background:rgba(77, 199, 236, 0.9);
 		color:#fff;
 		text-shadow:none;
@@ -396,7 +396,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 	form.navbar-search:hover > div.input-group > button,form.navbar-search.expand > div.input-group > button, .navbar-search .search-query:focus + button
 	{
-	  background-color:#f7f7f7;
+	  background-color:#383838;
 	  border-left:1px solid #eee;
 	  color: #777;
 	}
@@ -447,7 +447,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 	.navbar .nav.cart > li > a span
 	{
-		background:#4DC7EC;
+		background:#353535;
 		padding:2px 5px;
 		border-radius:3px;
 		font-weight:400px;
@@ -462,7 +462,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background: #fff url('../img/loader.gif') no-repeat 50% 50%;
+		background: #fff url('../img/loader.svg') no-repeat 50% 50%;
 		z-index: 99999;
 	}
 
@@ -595,7 +595,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	  width: 80px;
 	  opacity:1;
 	  margin:0 0px 0 0px;
-	  background:#f7f7f7;
+	  background:#383838;
 	}
 
 	.navbar-search:hover ul.autocomplete.show, .search-query:focus + ul.autocomplete.show
@@ -766,7 +766,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	{
 		background: rgba(255, 255, 255, 0.05);
 		box-shadow:none;
-		border-bottom:2px solid #4DC7EC;
+		border-bottom:2px solid #353535;
 		border-bottom:2px solid rgba(77, 199, 236, 0.5);
 		padding-bottom: 1px;
 	}
@@ -995,7 +995,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	margin:0px;
 	margin-top:20px;
 	color:#555;
-	/*color:#4DC7EC;*/
+	/*color:#353535;*/
 	padding:10px;
 }
 
@@ -1014,7 +1014,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 {
 	min-width:150px;
 	width:auto;
-	background-color:#f7f7f7;
+	background-color:#383838;
 	display:inline-block;
 	margin-right:5px;
 	padding-right:15px;
@@ -1047,7 +1047,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 .left-menu > div ul li.active > a
 {
-	border-bottom:1px solid #4DC7EC;
+	border-bottom:1px solid #353535;
 }
 
 .left-menu h3
@@ -1111,7 +1111,7 @@ ul.slides
 
 .product_sale
 {
-  background:#4DC7EC;
+  background:#353535;
   background: none repeat scroll 0 0 rgba(77, 199, 236, 0.9);
 
   color: #FFFFFF;
@@ -1128,7 +1128,7 @@ ul.slides
 /*.product:hover
 {
    border:1px solid rgba(42, 127, 211, 0.2);
-   box-shadow:0 0 15px -8px #4DC7EC;
+   box-shadow:0 0 15px -8px #353535;
 }*/
 .product .name
 {
@@ -1168,7 +1168,7 @@ ul.slides
 }
 .product .addcart a
 {
-    background:#4DC7EC;
+    background:#353535;
 	padding:8px 15px;
 	color:#fff;
 	font-family:'Open Sans';
@@ -1493,7 +1493,7 @@ ul.slides
     margin-bottom: 0;
 }
 #twitter_update_list a {
-    color: #4DC7EC;
+    color: #353535;
 }
 #twitter_update_list a:hover {
     color: #3D3D3D;
@@ -1768,7 +1768,7 @@ ul.slides
 }
 .show-login a
 {
-   color:#4DC7EC;
+   color:#353535;
    font-size:12px;
 }
 .show-login a:hover
@@ -1916,7 +1916,7 @@ label
 }
 .your_order  td span
 {
-    color:#4DC7EC;
+    color:#353535;
 }
 .your_order  .subtotal
 {
@@ -1945,7 +1945,7 @@ label
 }
 .your_order .radio:hover
 {
-   color:#4DC7EC;
+   color:#353535;
 }
 .your_order .radio img
 {
@@ -1996,7 +1996,7 @@ input[type="text"],label
 }
 .controls a:hover
 {
-   color:#4DC7EC;
+   color:#353535;
 }
 /*end my account*/
 
@@ -2025,7 +2025,7 @@ input[type="text"],label
 
 .image-additional a:focus
 {
-  outline: 1px dotted #4DC7EC;
+  outline: 1px dotted #353535;
 }
 
 .product-info h1
@@ -2055,7 +2055,7 @@ input[type="text"],label
 }
 .product-info li a:hover
 {
-   color:#4DC7EC;
+   color:#353535;
 }
 .line
 {
@@ -2160,7 +2160,7 @@ input[type="text"],label
 .tabs .nav-tabs > .active > a, .nav-tabs > .active > a:hover
 {
    color:#555;
-   border-color:#4DC7EC #eee transparent;
+   border-color:#353535 #eee transparent;
 }
 
 .nav > li > a:hover, .nav > li > a:focus
@@ -2219,7 +2219,7 @@ input[type="text"],label
 }
 .tab-pane a
 {
-   color:#4DC7EC;
+   color:#353535;
    font-size:12px;
 }
 .product-info .control-label
@@ -2504,7 +2504,7 @@ p.forgotten-password
 }
 .sitemap .subtitle a:hover
 {
-	color:#4DC7EC;
+	color:#353535;
 }
 .sitemap ul li a:hover
 {
@@ -2618,7 +2618,7 @@ h2.page-title
 .content-blog h3 a:hover
 {
 	text-decoration:none;
-	color:#4DC7EC;
+	color:#353535;
 }
 .post-detail
 {
@@ -2631,7 +2631,7 @@ h2.page-title
 }
 .post-detail a
 {
-	color:#4DC7EC;
+	color:#353535;
 }
 .post-detail a:hover
 {
@@ -2651,7 +2651,7 @@ h2.page-title
 }
 .text-blog a em:hover
 {
-	color:#4DC7EC;
+	color:#353535;
 	text-decoration:none;
 }
 
@@ -2681,7 +2681,7 @@ h2.page-title
 }
 .col-post ul.post-menu li a:hover
 {
-	color:#4DC7EC;
+	color:#353535;
 	text-decoration:none;
 }
 .col-post .post-menu b
@@ -2704,7 +2704,7 @@ h2.page-title
 .col-post ul.tags a:hover
 {
 	text-decoration:none;
-	background:#4DC7EC;
+	background:#353535;
 	color:#fff;
 }
 .col-post .tags li a
@@ -2788,7 +2788,7 @@ h2.page-title
 }
 .pagination > li > a:hover
 {
-	background:#4DC7EC;
+	background:#353535;
 	color:#fff;
 }
 .flickr-widget ul img
@@ -2837,7 +2837,7 @@ h2.page-title
 
 a.comment-reply-link
 {
-	color:#4DC7EC;
+	color:#353535;
 }
 
 .respond
@@ -3055,13 +3055,13 @@ ul.autocomplete li
 
 ul.autocomplete li.selected
 {
-  background-color: #4DC7EC;
+  background-color: #353535;
   color: #fff;
 }
 
 ul.autocomplete li strong
 {
-  color: #4DC7EC;
+  color: #353535;
   font-weight:600;
 }
 
