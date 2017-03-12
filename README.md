@@ -1,4 +1,4 @@
-# Angular Ecommerce Starter Kit (WIP)
+# Angular Ecommerce Starter Kit
 
 An ecommerce front end that leverages the Moltin API for backend store requests. Supports standard ecommerce functionality such as cart, product lists and checkout.
 
