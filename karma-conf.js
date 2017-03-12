@@ -15,7 +15,7 @@ module.exports = function(config) {
       'src/libs/jquery-3.1.1.min.js', 'src/libs/bootstrap.min.js', 'src/libs/angular-*.js',
       'src/libs/*.js',
       'build/templates.js',
-      'src/js/app.js',
+      'src/app.js',
 
       // test files
       "test/*.js"
@@ -24,7 +24,7 @@ module.exports = function(config) {
     preprocessors: {
 
         // src files
-        'src/js/app.js': ['browserify'],
+        'src/app.js': ['browserify'],
 
         // test files
         "test/*.js": ['browserify']

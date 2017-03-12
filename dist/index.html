@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/store.min.css">
 
   <script type="text/javascript" src="js/store.min.js"></script>
-
+  <base href="/samples/angularcommerce">
   <title>{{ title }} &bull; {{ siteName }}</title>
 
 </head>
@@ -27,32 +27,32 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/" class="navbar-brand">
+          <a href="." class="navbar-brand">
             <img src="img/logo.png" alt="{{ siteName }}" />
           </a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
             <li ng-class="{dropdown: category.children}" ng-repeat="category in categories | limitTo: 6">
-              <a data-toggle="dropdown" class="dropdown-toggle" href="/category/{{ category.slug }}" ng-if="category.children">{{ category.title }} <b class="caret"></b></a>
-              <a href="/category/{{ category.slug }}" ng-if="!category.children">{{ category.title }}</a>
+              <a data-toggle="dropdown" class="dropdown-toggle" href="category/{{ category.slug }}" ng-if="category.children">{{ category.title }} <b class="caret"></b></a>
+              <a href="category/{{ category.slug }}" ng-if="!category.children">{{ category.title }}</a>
               <ul class="dropdown-menu" ng-if="category.children">
-                <li ng-repeat-start="child in category.children" ng-if="child.children" class="dropdown-header"><a href="/category/{{ child.slug }}">{{ child.title }}</a></li>
-                <li ng-if="child.children" ng-repeat="sub in child.children"><a href="/category/{{ sub.slug }}">{{ sub.title }}</a></li>
+                <li ng-repeat-start="child in category.children" ng-if="child.children" class="dropdown-header"><a href="category/{{ child.slug }}">{{ child.title }}</a></li>
+                <li ng-if="child.children" ng-repeat="sub in child.children"><a href="category/{{ sub.slug }}">{{ sub.title }}</a></li>
                 <li ng-if="child.children" class="divier"></li>
-                <li ng-if="!child.children" ng-repeat-end><a href="/category/{{ child.slug }}">{{ child.title }}</a></li>
+                <li ng-if="!child.children" ng-repeat-end><a href="category/{{ child.slug }}">{{ child.title }}</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-right cart">
             <li class="dropdown">
-              <a href="/cart" class="dropdown-toggle" data-toggle="dropdown"><span>{{ cart.total_items }}</span></a>
+              <a href="cart" class="dropdown-toggle" data-toggle="dropdown"><span>{{ cart.total_items }}</span></a>
               <div class="cart-info dropdown-menu">
                 <table class="table">
                   <tbody>
                     <tr ng-repeat="(key, product) in cart.contents">
                       <td class="image"><img alt="Image" class="img-responsive" ng-src="{{ Page.image.resize(product.image, 100, 100) }}" /></td>
-                      <td class="name"><a href="/product/{{ product.slug }}">{{ product.title }}</a></td>
+                      <td class="name"><a href="product/{{ product.slug }}">{{ product.title }}</a></td>
                       <td class="quantity">x&nbsp;{{ product.quantity }}</td>
                       <td class="total"></td>
                       <td class="remove"><img src="img/remove-small.png" alt="Remove" title="Remove" ng-id="{{ key }}" ng-qty="0" cart-qty /></td>
@@ -73,7 +73,7 @@
                     </tbody>
                   </table>
                   <div class="checkout">
-                    <a href="/cart" class="ajax_right">View Cart</a> | <a href="/checkout" class="ajax_right">Checkout</a>
+                    <a href="cart" class="ajax_right">View Cart</a> | <a href="checkout" class="ajax_right">Checkout</a>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@
             <div>
               <h3>Information</h3>
               <ul>
-                <li ng-repeat="page in pages" ng-if="page.menu.data.key == 'info'"><a href="/{{ page.slug }}">{{ page.title }}</a></li>
+                <li ng-repeat="page in pages" ng-if="page.menu.data.key == 'info'"><a href="{{ page.slug }}">{{ page.title }}</a></li>
               </ul>
             </div>
           </div>
@@ -109,7 +109,7 @@
             <div>
               <h3>Customer Service</h3>
               <ul>
-                <li ng-repeat="page in pages" ng-if="page.menu.data.key == 'customer'"><a href="/{{ page.slug }}">{{ page.title }}</a></li>
+                <li ng-repeat="page in pages" ng-if="page.menu.data.key == 'customer'"><a href="{{ page.slug }}">{{ page.title }}</a></li>
               </ul>
             </div>
           </div>

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
             options: {
                 configFile: "eslint.json"
             },
-            src: ["src/js/**/*.js"]
+            src: ["src/app/**/*.js"]
         }
     },
     html2js: {
@@ -21,11 +21,11 @@ module.exports = function(grunt) {
           removeStyleLinkTypeAttributes: true
         },
         rename: function(name) {
-          return name.replace('html/', '/pages/');
+          return name.replace('views/', '/pages/');
         }
       },
       main: {
-        src: ['src/html/*.html', 'src/html/partials/*.html'],
+        src: ['src/views/*.html', 'src/views/partials/*.html'],
         dest: 'build/templates.js'
       }
     },
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
         separator: ";\n"
       },
       dist: {
-        src: ['src/libs/jquery-3.1.1.min.js', 'src/libs/bootstrap.min.js', 'src/libs/angular-*.js', 'src/libs/*.js', 'build/templates.js', 'src/js/app.js', 'src/js/factory.js', 'src/js/directive.js', 'src/js/pages/*.js', 'src/js/run.js'],
+        src: ['src/libs/jquery-3.1.1.min.js', 'src/libs/bootstrap.min.js', 'src/libs/angular-*.js', 'src/libs/*.js', 'build/templates.js', 'src/app.js','src/app/routes.js', 'src/app/factory.js', 'src/app/directive.js', 'src/app/pages/*.js', 'src/app/run.js'],
         dest: 'build/concat.js'
       }
     },
@@ -72,19 +72,26 @@ module.exports = function(grunt) {
         }
       }
     },
+    sass: {                              // Task
+        dist: {
+        files: {
+              'build/css/store.css': 'src/scss/style.scss'
+          }
+        }
+    },
     cssmin: {
       compress: {
         options: {
           banner: '/* <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */'
         },
         files: {
-          'dist/css/store.min.css': ['src/css/*.css']
+          'dist/css/store.min.css': ['build/css/store.css']
         }
       }
     },
     watch: {
-      files: ['src/js/*.js', 'src/js/pages/*.js', 'src/libs/*.js', 'src/css/*.css', 'src/html/*.html'],
-      tasks: ['eslint', 'html2js', 'concat','babel', 'uglify', 'cssmin', 'watch'],
+      files: ['src/*.js','src/app/*.js', 'src/app/pages/*.js', 'src/libs/*.js', 'src/scss/*.scss', 'src/views/*.html'],
+      tasks: ['eslint', 'html2js', 'concat','babel', 'uglify', 'sass','cssmin', 'watch'],
       options: {
             livereload: true
       }
@@ -93,7 +100,7 @@ module.exports = function(grunt) {
         server: {
           options: {
             port: 9000,
-            base: './dist/',
+            base: './',
             hostname: '0.0.0.0',
             protocol: 'http',
             livereload: true,
@@ -108,6 +115,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html2js');
   grunt.loadNpmTasks("gruntify-eslint");
   grunt.loadNpmTasks('grunt-babel');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -116,5 +124,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', [
     'karma'
   ]);
-  return grunt.registerTask('default', ['eslint', 'html2js', 'concat','babel', 'uglify', 'cssmin', 'connect', 'watch']);
+  return grunt.registerTask('default', ['eslint', 'html2js', 'concat','babel', 'uglify', 'sass', 'cssmin', 'connect', 'watch']);
 };
