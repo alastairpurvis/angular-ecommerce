@@ -14,10 +14,10 @@ An ecommerce front end that leverages the Moltin API for backend store requests.
 
 ## Build & development
 ```
-npm install moltin
+yarn install moltin
 ```
 ```
-npm install
+yarn install
 ```
 ```
 grunt
